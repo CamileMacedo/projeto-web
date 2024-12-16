@@ -80,8 +80,12 @@ h2 {
 }
 
 .paragraph {
-  line-height: 150%;
+  line-height: 120%;
   margin-bottom: 32px;
+}
+
+.sobre{
+  margin-left: 20px;
 }
 
 .button {

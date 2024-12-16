@@ -33,27 +33,37 @@ setInterval(carrossel, 1800);
 function toggleScheme() {
     const body = document.body;
     const isDark = body.classList.toggle('dark');
+    const mainLogo = document.getElementById('main-logo');
 
     if (isDark) {
         body.classList.remove('light');
         localStorage.setItem('colorScheme', 'dark');
+        mainLogo.src = "../assets/logo_sfundo.png";
     } else {
         body.classList.add('light');
         localStorage.setItem('colorScheme', 'light');
+        mainLogo.src = "../imagens/logo_cv_sem_fundo.png";
     }
 }
 
     // tema inicial
-(function initializeScheme() {
-    const savedScheme = localStorage.getItem('colorScheme') || 'light';
-    document.body.classList.add(savedScheme);
-})();
+    (function initializeScheme() {
+        const savedScheme = localStorage.getItem('colorScheme') || 'light';
+        const mainLogo = document.getElementById('main-logo'); // Seleciona o logo principal.
+    
+        document.body.classList.add(savedScheme);
+        if (savedScheme === 'dark') {
+            mainLogo.src = "../assets/logo_sfundo.png"; // Define logo escuro se o tema salvo for 'dark'.
+        } else {
+            mainLogo.src = "../imagens/logo_cv_sem_fundo.png"; // Define logo claro se o tema salvo for 'light'.
+        }
+    })();
 
 // ---------------------------------------------------------------------
 // função viaCEP
 async function buscarEndereco(cep) {
     try {
-        const response = await fetch(`https://viacep.com.br/ws/${cep}/scriptson/`);
+        const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
         if (!response.ok) {
             throw new Error('Erro ao buscar o endereço');
         }
@@ -80,7 +90,7 @@ async function buscarEndereco(cep) {
 function validarEstado(estado) {
     const mensagem = document.getElementById('mensagem');
     if (estado.toUpperCase() !== 'SP') {
-        exibirMensagem('No momento, não atendemos regiões fora do estado de São Paulo.', 'red');
+        exibirMensagem('No momento, não atendemos regiões fora do estado de São Paulo.', 'yellow');
     } else {
         exibirMensagem('Atendemos sua região!', 'green');
     }
