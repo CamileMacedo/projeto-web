@@ -9,12 +9,15 @@
 #main-logo {
   margin: 0;
   padding: 0;
+  max-width: 10rem;
+  max-height: 10rem;
 }
 
 body {
   margin: 0;
   font-family: "Poppins", serif;
   transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
 }
 
 body.light {
@@ -90,6 +93,10 @@ header {
       width: 130px;
     }
   }
+}
+
+.div-image {
+  width: 100%;
 }
 
 #home {
@@ -266,6 +273,30 @@ footer {
   img.img-e {
     object-fit: cover;
     width: 835px;
+    height: 580px;
+  }
+}
+
+#carrossel-portifolio {
+  display: none;
+
+  .carrossel {
+    overflow: hidden;
+    width: 580px;
+    height: 580px;
+    border: 1px solid #f1e8fe;
+    border-radius: 1rem;
+  }
+
+  .container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+  }
+
+  .img-e {
+    object-fit: cover;
+    width: 580px;
     height: 580px;
   }
 }
