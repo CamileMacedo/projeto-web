@@ -193,23 +193,6 @@ footer {
   }
 }
 
-#quais-servicos {
-  padding: 64px, 80px;
-  text-align: center;
-  background-color: #7d3eff;
-  padding-top: 80px;
-  padding-bottom: 80px;
-
-  img {
-    margin: 64px, auto;
-  }
-
-  .paragraph {
-    max-width: 950px;
-    margin: 0 auto;
-  }
-}
-
 .duvida {
   position: relative;
 
@@ -247,36 +230,6 @@ footer {
 
   &.ativa img {
     rotate: 270deg;
-  }
-}
-
-footer {
-  background-color: rgb(163 108 255 / 25%);
-  justify-content: space-between;
-
-  img,
-  .title {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 24px;
-  }
-
-  div a {
-    color: #263138;
-    display: block;
-    margin-bottom: 16px;
-    text-decoration: none;
-    max-width: 350px;
-  }
-
-  p {
-    margin-bottom: 16px;
-    max-width: 350px;
-
-    a {
-      color: #16002f;
-      text-decoration: none;
-    }
   }
 }
 
@@ -347,16 +300,5 @@ footer {
   }
 }
 
-#secPort{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
 
-#secSobre{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
+
