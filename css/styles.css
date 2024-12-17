@@ -303,17 +303,6 @@ footer {
   }
 }
 
-#form-contato {
-  display: grid;
-  width: 297px;
-  min-width: max-content;
-  padding: 30px;
-
-  label {
-    margin: 10px;
-  }
-}
-
 .carrossel {
   overflow: hidden;
   width: 580px;
