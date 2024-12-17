@@ -9,6 +9,22 @@ form#form-endereco label {
     font-weight: 600;
 }
 
+#verificaCep{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#verificaCep h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-left: 75px;
+}
+
+
 form#form-endereco input[type="text"] {
     width: 500px;
     padding: 10px;

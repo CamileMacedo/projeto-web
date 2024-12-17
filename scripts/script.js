@@ -10,7 +10,6 @@ doubtElements.forEach(function(duvida) {
 
 const imagesCarrossel = document.getElementById("img-div");
 const images = document.querySelectorAll("#img-div .img-e");
-const shapeImage = document.getElementById("shape-image");
 const logo = document.querySelectorAll(".logo");
 
 let idx = 0;
@@ -38,7 +37,7 @@ function toggleScheme() {
     if (isDark) {
         body.classList.remove('light');
         localStorage.setItem('colorScheme', 'dark');
-        mainLogo.src = "../assets/logo_sfundo.png";
+        mainLogo.src = "../imagens/logo_sfundo.png";
     } else {
         body.classList.add('light');
         localStorage.setItem('colorScheme', 'light');
@@ -53,7 +52,7 @@ function toggleScheme() {
     
         document.body.classList.add(savedScheme);
         if (savedScheme === 'dark') {
-            mainLogo.src = "../assets/logo_sfundo.png"; // Define logo escuro se o tema salvo for 'dark'.
+            mainLogo.src = "../imagens/logo_sfundo.png"; // Define logo escuro se o tema salvo for 'dark'.
         } else {
             mainLogo.src = "../imagens/logo_cv_sem_fundo.png"; // Define logo claro se o tema salvo for 'light'.
         }
@@ -122,3 +121,8 @@ const form = document.getElementById('contact-form');
             const message = document.getElementById('message').value;
             window.location.href = `mailto:contato@creative.com?subject=Contato de ${name}&body=${message} (Email: ${email})`;
         });
+
+
+
+  
+  

@@ -8,30 +8,31 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header>
             <a href="index.html">
-                <img src="../assets/logo_sfundo.png" alt="CV logo">
+                <img src="./imagens/logo_sfundo.png" alt="CV logo">
             </a>
 
             <nav> 
                 <a href="index.html">Home</a>
-                <a href="servicos.html">Serviços</a>
-                <a href="portifolio.html">Portfólio</a>
-                <a href="contato.html">Contato</a>
-                <a href="sobre.html">Sobre Nós</a>
+                <a href="./paginas/servicos.html">Serviços</a>
+                <a href="./paginas/portifolio.html">Portfólio</a>
+                <a href="./paginas/contato.html">Contato</a>
+                <a href="./paginas/sobre.html">Sobre Nós</a>
             </nav>
-            <button class="toggle-button" onclick="toggleScheme()"><img src="../assets/5262027.png" alt=""></button>
+            <button class="toggle-button" onclick="toggleScheme()"><img src="./imagens/5262027.png" alt=""></button>
         </header>
 
         <main>
             <section id="home">
                 <img id="main-logo" class="logo" src="../imagens/logo_cv_sem_fundo.png" alt="" width="580" height="580">
 
-                <div>
-                    <h1>Seu carro, sua identidade, nosso toque.</h1>
+                <div id="home-message">
+                    <h1 class="tituloMP">Seu carro, sua identidade, nosso toque.</h1>
                     <p class="paragraph">Impacte onde quer que vá, seja para personalização pessoal ou divulgação de sua marca. A Creative Visualizer te ajuda a criar um visual exclusivo e inesquecível. Muito mais que um envelopamento, uma experiência! Entre em contato para mais informações:</p>
                     <a class="button" href="https://wa.me/5511998116279" target="_blank">Falar com atendente</a>
                     <a class="button-transparent" href="contato.html">Contatos</a>
@@ -40,30 +41,9 @@
                 <img class="absolute" src="../imagens/shape.png" alt="">
             </section>
 
-            <section id="shop-cv">
-                <div>
-                    <h2>Quais serviços fazemos</h2>
-                    <p class="paragraph">A Creative Vizualizer é especializada em envelopamento automotivo
-                        premium, transformando veículos com estilo, proteção e
-                        exclusividade. Nossa missão é oferecer soluções personalizadas que
-                        reflitam a identidade de nossos clientes, utilizando materiais de
-                        alta qualidade que garantem durabilidade e um acabamento impecável.
-                        Atendemos a diferentes tipos de veículos, sempre com atenção às
-                        necessidades específicas e ao design desejado. Na Creative
-                        Vizualizer, cada projeto é conduzido com precisão e cuidado, criando
-                        resultados que unem sofisticação e funcionalidade, elevando o visual
-                        do seu automóvel a um novo patamar.</p>
-                    <ul>
-                        <li>Envelopamento Total</li>
-                        <li>Envelopamento Superficial</li>
-                        <li>Envelopamento de Teto e Retrovisores</li>
-                        <li>PPF Total</li>
-                        <li>PPF Kit Frontal</li>
-                        <li>Aplicação de fume nos faróis</li>
-                    </ul>
-                </div>
-                <div class="carrossel">
-                    <div class="container" id="img-div">
+            <section id="shop-cv" class="home">
+                <div class="carrossel-home"></div>
+                    <div class="container-home" id="img-div">
                         <img class="img-e" src="../imagens/carrossel-1.png" alt="img-1">
                         <img class="img-e" src="../imagens/carrossel-2.png" alt="img-2">
                         <img class="img-e" src="../imagens/carrossel-3.png" alt="img-3">
@@ -71,6 +51,8 @@
                         <img class="img-e" src="../imagens/carrossel-5.png" alt="img-5">
                     </div>
                 </div>
+              
+                <a class="link-servicos" href="./servicos.html">CONHEÇA NOSSOS SERVIÇOS</a>
             </section>
             
             <section id="duvidas">
@@ -119,11 +101,13 @@
 
             <div>
                 <strong class="title">Links Rápidos</strong>
-                <nav> 
-                    <a href="#home">Home</a>
-                    <a href="#shop-cv">Sobre</a>
-                    <a href="#duvidas">Dúvidas</a>
-                </nav>
+                <div> 
+                    <a href="index.html">Home</a>
+                    <a href="./paginas/servicos.html">Serviços</a>
+                    <a href="./paginas/portifolio.html">Portfólio</a>
+                    <a href="./paginas/contato.html">Contato</a>
+                    <a href="./paginas/sobre.html">Sobre Nós</a>
+                </div>
             </div>
 
             <div>
@@ -134,7 +118,7 @@
             </div>            
         </footer>
         <div id="copyright">
-            "Developed by <a href="https://github.com/CamileLFM" target="_blank">@CamileLFM</a>."
+            "Developed by Creative Vizualizer Team."
         </div>
 
         <script src="../scripts/script.js"></script>
