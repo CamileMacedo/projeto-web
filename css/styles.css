@@ -194,6 +194,11 @@ footer {
   }
 }
 
+.img-duvida {
+  width: 14rem;
+  height: 14rem;
+}
+
 .duvida {
   position: relative;
 
