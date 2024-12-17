@@ -1,4 +1,3 @@
-
 // Carrossel
 var doubtElements = document.querySelectorAll(".duvida");
 
@@ -14,14 +13,16 @@ const logo = document.querySelectorAll(".logo");
 
 let idx = 0;
 
-function carrossel() {
-    idx++;
+if (imagesCarrossel !== null && images !== null) {
+    function carrossel() {
+        idx++;
 
-    if (idx > images.length -1) {
-        idx = 0;
+        if (idx > images.length - 1) {
+            idx = 0;
+        }
+
+        imagesCarrossel.style.transform = `translateX(${-idx * 580}px)`;
     }
-
-    imagesCarrossel.style.transform = `translateX(${-idx * 580}px)`;
 }
 
 setInterval(carrossel, 1800);
@@ -45,18 +46,20 @@ function toggleScheme() {
     }
 }
 
-    // tema inicial
-    (function initializeScheme() {
-        const savedScheme = localStorage.getItem('colorScheme') || 'light';
-        const mainLogo = document.getElementById('main-logo'); // Seleciona o logo principal.
-    
-        document.body.classList.add(savedScheme);
+// tema inicial
+(function initializeScheme() {
+    const savedScheme = localStorage.getItem('colorScheme') || 'light';
+    const mainLogo = document.getElementById('main-logo'); // Seleciona o logo principal.
+
+    document.body.classList.add(savedScheme);
+    if (mainLogo !== null) {
         if (savedScheme === 'dark') {
             mainLogo.src = "../imagens/logo_sfundo.png"; // Define logo escuro se o tema salvo for 'dark'.
         } else {
             mainLogo.src = "../imagens/logo_cv_sem_fundo.png"; // Define logo claro se o tema salvo for 'light'.
         }
-    })();
+    }
+})();
 
 // ---------------------------------------------------------------------
 // função viaCEP
@@ -103,7 +106,7 @@ function exibirMensagem(texto, cor) {
 }
 
 function onCepBlur(event) {
-    const cep = event.target.value.replace(/\D/g, ''); 
+    const cep = event.target.value.replace(/\D/g, '');
     if (cep.length === 8) {
         buscarEndereco(cep);
     } else {
@@ -114,15 +117,13 @@ function onCepBlur(event) {
 // ------------------------------------
 // função mandar form de contato
 const form = document.getElementById('contact-form');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            window.location.href = `mailto:contato@creative.com?subject=Contato de ${name}&body=${message} (Email: ${email})`;
-        });
 
-
-
-  
-  
+if (form !== null) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        window.location.href = `mailto:contato@creative.com?subject=Contato de ${name}&body=${message} (Email: ${email})`;
+    });
+}

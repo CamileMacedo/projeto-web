@@ -6,7 +6,7 @@
   font-style: normal;
 }
 
-#main-logo{
+#main-logo {
   margin: 0;
   padding: 0;
 }
@@ -26,45 +26,48 @@ body.dark {
   background-color: #000000;
   color: #ffffff;
 
-  .absolute{
+  .absolute {
     display: none;
   }
 
-  header, footer{
+  header,
+  footer {
     background-color: #7d3eff;
   }
 
   .duvida {
-    h3{
-    background-color: #6d00db7a;
+    h3 {
+      background-color: #6d00db7a;
     }
 
-    p{
+    p {
       background-color: #263138;
     }
   }
+
+  .quais-servicos {
+    background-color: #80808061;
+  }
 }
 
-.display-off{
+.display-off {
   display: none;
 }
 
 .toggle-button {
   display: flex;
-  
+
   padding: 10px 20px;
   cursor: pointer;
   border: none;
   border-radius: 5px;
   z-index: 1000;
-  
 }
 
-button img{
+button img {
   width: 30px;
   height: 30px;
 }
-
 
 header {
   background-color: #16002f;
@@ -79,15 +82,14 @@ header {
 
   a {
     color: #ffffff;
-    font-weight: 600;
+    font-weight: 500;
     padding: 0 25px;
     text-decoration: none;
 
-    img{
+    img {
       width: 130px;
     }
   }
-
 }
 
 #home {
@@ -95,7 +97,6 @@ header {
   align-items: center;
   gap: 25px;
   position: relative;
-  
 }
 
 h1,
@@ -105,7 +106,7 @@ h2 {
   margin: 32px;
 }
 
-.tituloMP{
+.tituloMP {
   margin: 0px;
   margin-bottom: 20px;
 }
@@ -115,7 +116,7 @@ h2 {
   margin-bottom: 32px;
 }
 
-.sobre{
+.sobre {
   margin-left: 20px;
 }
 
@@ -127,7 +128,7 @@ h2 {
   text-decoration: none;
 }
 
-#home-message{
+#home-message {
   margin-top: 50px;
   margin-right: 0.65rem;
 }
@@ -157,10 +158,10 @@ footer {
   padding: 64px;
 }
 
-#shop-cv{
+#shop-cv {
   display: flex;
 
-  .quais-servicos{
+  .quais-servicos {
     width: 63%;
   }
 
@@ -173,13 +174,13 @@ footer {
     padding: 0 !important;
     overflow: hidden;
     gap: 0 !important;
-    
-    .carrossel-home{
+
+    .carrossel-home {
       max-width: 100%;
       z-index: 0;
     }
 
-    .link-servicos{
+    .link-servicos {
       z-index: 1;
       position: absolute;
       font-size: 70px;
@@ -233,7 +234,7 @@ footer {
   }
 }
 
-#copyright {
+.copyright {
   background-color: #263138;
   color: #ffffff;
   padding: 24px;
@@ -244,37 +245,12 @@ footer {
   }
 }
 
-.portifolio-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
-  margin-top: 32px;
-
-  img {
-    width: 100%;
-    border-radius: 8px;
-  }
-}
-
 .carrossel {
   overflow: hidden;
   width: 580px;
   height: 580px;
   border: 1px solid #f1e8fe;
   border-radius: 1rem;
-
-}
-
-.container {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(0);
-
-  img.img-e {
-    object-fit: cover;
-    width: 580px;
-    height: 580px;
-  }
 }
 
 .container-home {
@@ -282,12 +258,9 @@ footer {
   transition: transform 0.5s ease-in-out;
   transform: translateX(0);
 
-  img.img-e{
+  img.img-e {
     object-fit: cover;
     width: 835px;
     height: 580px;
   }
 }
-
-
-
